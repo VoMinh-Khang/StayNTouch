@@ -1,0 +1,13 @@
+C:\Users\binhp\source\repos\PTTK-HTTT-N08\CODE\QLKhachSan\QLKhachSan\bin\Debug\QLKhachSan.exe.config
+C:\Users\binhp\source\repos\PTTK-HTTT-N08\CODE\QLKhachSan\QLKhachSan\bin\Debug\QLKhachSan.exe
+C:\Users\binhp\source\repos\PTTK-HTTT-N08\CODE\QLKhachSan\QLKhachSan\bin\Debug\QLKhachSan.pdb
+C:\Users\binhp\source\repos\PTTK-HTTT-N08\CODE\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.AssemblyReference.cache
+C:\Users\binhp\source\repos\PTTK-HTTT-N08\CODE\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.SuggestedBindingRedirects.cache
+C:\Users\binhp\source\repos\PTTK-HTTT-N08\CODE\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.DangKy.resources
+C:\Users\binhp\source\repos\PTTK-HTTT-N08\CODE\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.DangNhap.resources
+C:\Users\binhp\source\repos\PTTK-HTTT-N08\CODE\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.DatPhong.resources
+C:\Users\binhp\source\repos\PTTK-HTTT-N08\CODE\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.Properties.Resources.resources
+C:\Users\binhp\source\repos\PTTK-HTTT-N08\CODE\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.GenerateResource.cache
+C:\Users\binhp\source\repos\PTTK-HTTT-N08\CODE\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.csproj.CoreCompileInputs.cache
+C:\Users\binhp\source\repos\PTTK-HTTT-N08\CODE\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.exe
+C:\Users\binhp\source\repos\PTTK-HTTT-N08\CODE\QLKhachSan\QLKhachSan\obj\Debug\QLKhachSan.pdb

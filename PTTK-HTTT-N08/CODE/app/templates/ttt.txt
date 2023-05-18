@@ -1,0 +1,41 @@
+
+
+
+
+
+
+<select id="payment-method" class="form-control" name="pay">
+    <option value="pay" data-image="https://timo.vn/wp-content/uploads/card-1673581_1280-2.png">Thẻ Ngân Hàng</option>
+    <option value="momo" data-image="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-MoMo-Transparent.png">MoMo</option>
+    <option value="zalo" data-image="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-ZaloPay-Square.png">Ví ZaloPay</option>
+  </select>
+  
+  <div id="selected-text1" style = "width:100px;background-color: aquamarine;">1</div>
+  <div id="selected-text2" style = "width:100px;background-color: rgb(212, 19, 19);display: none;">2</div>
+  <div id="selected-text3" style = "width:100px;background-color: rgb(0, 4, 254);display: none;">3</div>
+
+  <script>
+    // Get references to the select element and div elements
+    const select = document.getElementById('payment-method');
+    const div1 = document.getElementById('selected-text1');
+    const div2 = document.getElementById('selected-text2');
+    const div3 = document.getElementById('selected-text3');
+  
+    // Add an event listener to the select element
+    select.addEventListener('change', function() {
+      // Check which option is selected and update the display of the corresponding div element
+      if (select.value === 'pay') {
+        div1.style.display = 'block';
+        div2.style.display = 'none';
+        div3.style.display = 'none';
+      } else if (select.value === 'momo') {
+        div1.style.display = 'none';
+        div2.style.display = 'block';
+        div3.style.display = 'none';
+      } else if (select.value === 'zalo') {
+        div1.style.display = 'none';
+        div2.style.display = 'none';
+        div3.style.display = 'block';
+      }
+    });
+  </script>

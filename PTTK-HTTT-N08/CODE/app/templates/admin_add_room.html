@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>StayNTouch &mdash; Hotel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Work+Sans:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+    <script src="https://kit.fontawesome.com/4b31b094ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
+    
+    
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/flaticon/font/flaticon.css') }}">
+  
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+</head>
+<style>
+    .form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+</style>
+<body>
+    <div style = "margin: 50px auto;width:400px;height:500px;background-color: rgb(255, 255, 255);">
+      
+        <form method = "POST">
+            <h1 style = "padding-left:60px;">THÊM PHÒNG</h1>
+            <form class="row g-3">
+                <div class="col-12">
+                  <label for="inputEmail4" class="form-label">Mã phòng</label>
+                  <input type="text" class="form-control" id="inputEmail4" name = "maphong" style = "border:1px #4443436d solid;color: black;width: 400px;">
+                </div>
+                <div class="col-12">
+                  <label for="inputPassword4" class="form-label">Tối đa</label>
+                  <input type="text" class="form-control" id="inputPassword4" name = "toida" style = "border:1px #4443436d solid;color: black;width: 400px;">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress" class="form-label">Tình trạng</label>
+                  <input type="text" class="form-control" id="inputPassword4" name = "tinhtrang" style = "border:1px #4443436d solid;color: black;width: 400px;">
+                </div>
+                <div class="col-12">
+                  <label for="inputAddress2" class="form-label">Quy định phòng</label>
+                  <input type="text" class="form-control" id="inputPassword4" name = "quydinhphong" style = "border:1px #4443436d solid;color: black;width: 400px;">
+                </div>
+                <div class="col-12">
+                  <label for="inputCity" class="form-label">Tiện nghi</label>
+                  <input type="text" class="form-control" id="inputPassword4" name = "tiennghi" style = "border:1px #4443436d solid;color: black;width: 400px;">
+                </div>
+                <div class="col-12">
+                    <label for="inputCity" class="form-label">Link ảnh</label>
+                    <input type="text" class="form-control" id="inputPassword4" name = "linkanh" style = "border:1px #4443436d solid;color: black;width: 400px;">
+                  </div>
+                  <div class="form-group col-md-4" style="margin-top: 20px;">
+                    <label for="inputState" class="form-label">Loại Phòng</label>
+                    <select id="inputState" class="form-control" style = "width:200px;" name = "loaiphong">
+                        <option selected disabled hidden>Chọn loại phòng</option>
+                        <option>LP001</option>
+                        <option>LP002</option>
+                        <option>LP003</option>
+                        <option>LP004</option>
+                        <option>LP005</option>
+                        <option>LP006</option>
+                    </select>
+                </div>
+               
+                <div class="col-12">
+                  <button type="submit" class="btn btn-primary" style = "margin-top:20px;margin-bottom: 80px;">Thêm</button>
+                </div>
+              </form>
+        </form>
+
+    </div>
+    
+</body>
+</html>
+

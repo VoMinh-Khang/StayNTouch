@@ -1,0 +1,227 @@
+
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="backgroud-blue">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-7 text-center" data-aos="fade">
+        </div>
+      </div>
+    </div>
+  </div> 
+
+<div id="booking" class="section" style="height:700px;">
+    <div class="section-center section-pay">
+        <div class="container">
+            <div class="row">
+                <div class ="col-sm-8">
+                    <div class="row main-booking main-pay">
+                        
+                        <div class="booking-form">
+                            {% if message %}
+                            <div class="alert alert-warning" role="alert">
+                              {{message}}
+                            </div>
+                            {% endif %}
+                            <form method="POST">
+                                <div class="row no-margin">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <span class="form-label">Hình thức thanh toán</span>
+                                                <select id="payment-method" class="form-control" name = "type-pay"  style = "height:70px;">
+                                                    <option value="pay" data-image="https://timo.vn/wp-content/uploads/card-1673581_1280-2.png">Thẻ Ngân Hàng</option>
+                                                    <option value="momo" data-image="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-MoMo-Transparent.png">MoMo</option>
+                                                    <option value="zalo" data-image="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-ZaloPay-Square.png">Ví ZaloPay</option>
+                                                </select>
+                                                <div style = "margin-top:-16px;">
+                                                    <hr style = " border-color: #dddee9">
+                                                </div>
+                                                <span class="select-arrow"></span>
+                                                <div class="select-image"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="selected-box1" class ="box-pay">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <span class="form-label">Tên Trên thẻ</span>
+                                                <input class="form-control" type="tel" name = "name-pay"  style = "height:70px;" >
+                                                <div style = "margin-top:-16px;">
+                                                    <hr style = " border-color: #dddee9">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <span class="form-label">Số thẻ tín dụng / thẻ ghi nợ</span>
+                                                <input class="form-control" type="tel" name = "id-pay"  style = "height:70px;" >
+                                                <div style = "margin-top:-16px;">
+                                                    <hr style = " border-color: #dddee9">
+                                                </div>
+                                            </div>
+                                            <div class="row no-margin">
+                                                <div class="col-sm-4">
+                                                    <span class="form-label" style = "margin-left:12px;">Ngày hết hạn</span>
+                                                    <input class="form-control form-control-sm" style = "height:70px;"type="date" name = "date-pay">
+                                                    <div style = "margin-top:-16px;">
+                                                        <hr style = " border-color: #dddee9">
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-sm-4">
+                                                    <span class="form-label"style = "margin-left:12px;">CVC <span style = "color: #ff567d;">*</span></span>
+                                                    <input class="form-control form-control-sm" style = "height:70px;" type="tel" name = "cvc-pay">
+                                                    <div style = "margin-top:-16px;">
+                                                        <hr style = " border-color: #dddee9">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-2">
+                                                    <img src="../static/images/cvc.png" style = "width:100px;border:1px #7e7e7e solid;border-radius: 5px;margin-left:40px;"alt="">
+                                                </div>
+                                            </div>
+                        
+                                                
+                        
+                                        </div>
+                                    </div>
+                                    <div id="selected-box2" class ="box-pay" style =" display: none;">
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <span class="form-label">Số điện thoại</span>
+                                                <input class="form-control" type="tel" name = "phone-momo"  style = "height:70px;" >
+                                                <div style = "margin-top:-16px;">
+                                                    <hr style = " border-color: #dddee9">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class = "col-sm-8">
+                                                        <span style = "color:#c34285;margin-left:3px;">Quét mã QR để thanh toán qua <span><img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-MoMo-Square.png"  style = "margin-left:10px;width:20px;"alt=""></span></span>
+                                                        <p><span><img src="../static/images/scanner.png" style = "width:20px;margin-right:5px;" alt=""></span><span style = "color: #1d1d1d; font-size:13px;">Sử dụng App <span style = "color: #c34285;">MoMo</span> hoặc ứng dụng Camera hỗ trợ QR code để quét mã</span></p>
+                                                    </div>
+                                                    <div class = "col-sm-2">
+                                                        <img src="../static/images/success.png" style = "width:150px;"alt="">
+        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                    <div id="selected-box3" class="box-pay" style =" display: none;">
+
+                                        <div class="form-group">
+                                            <div class="form-group">
+                                                <span class="form-label">Số điện thoại</span>
+                                                <input class="form-control" type="tel" name = "phone-zalo"  style = "height:70px;" >
+                                                <div style = "margin-top:-16px;">
+                                                    <hr style = " border-color: #dddee9">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class = "col-sm-8">
+                                                        <span style = "color:#118acb;margin-left:3px;">Quét mã QR để thanh toán qua <span><img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-ZaloPay-Square.png"  style = "margin-left:10px;width:20px;"alt=""></span></span>
+                                                        <p><span><img src="../static/images/scanner.png" style = "width:20px;margin-right:5px;" alt=""></span><span style = "color: #1d1d1d; font-size:13px;">Sử dụng App <span style = "color: #118acb;">Zalo Pay</span> hoặc ứng dụng Camera hỗ trợ QR code để quét mã</span></p>
+                                                    </div>
+                                                    <div class = "col-sm-2">
+                                                        <img src="../static/images/success.png" style = "width:150px;"alt="">
+        
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                        </div> 
+                                    </div>
+                                    <div>
+                                        <p style = "font-size:13px;">
+                                            Hãy tuân thủ đầy đủ các 
+                                            <a href="#" style = "color: rgb(32, 32, 172);text-decoration: underline;">Điều khoản sử dụng</a> 
+                                            và 
+                                            <a href="#" style = "color: rgb(32, 32, 172);text-decoration: underline;">chính sách của chúng tôi.</a> 
+                                        </p>
+                                    </div>
+                                    <button type="submit" class="btn" style = "margin-bottom:-20px; background-color: rgb(58, 122, 224) ;color: #fff;padding:10px 20px;"><i style = "margin-right:10px;margin-top:-2px;"class="fa-solid fa-lock"></i>Xác nhận ngay!</button>
+                            </form> 
+                        </div>
+                    </div>
+                    <a href="{{ url_for('booking', RoomID = room_item[0] | b64encode) }}" class="btn btn-back-bk">Quay lại Chi tiết đặt phòng</a>
+                    
+                </div>
+                <div class = "col-sm-4" style="margin-top:-20px;">
+                    <div class="row info-pay">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img style = "max-width: 100%"src="{{room_item[6]}}" alt="">
+                            </div>
+
+                            <div class="col-sm-6 text-des">
+                                <div class="block-wifi"><p>Wi-Fi Miễn phí</p></div>
+                                <p style = "color: rgb(27, 27, 27); font-size:18px;margin-bottom:-6px;">Phòng số {{room_item[0]}}</p>
+                                <span style="font-size:120%;color:#ff567d;">&starf;&starf;&starf;&starf;&star;</span>
+                                <p style="margin-bottom:-1px;">Tiện nghi:</p>
+                                {% for i in tiennghi %}
+                                    <li style="margin-left:20px;">{{i}}</li>
+                                {% endfor %}
+                        
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row info-pay" style = "margin-top:20px;">
+                        <h1>Giá tiền (1 phòng x 1 đêm):<span style="padding-right: 130px;"></span> <span style = "color: rgb(255, 0, 0);">{{Gia}}</span></h1>
+                        <h1>Tổng giá phòng: <span style="padding-right: 193px;"></span> <span style = "color: rgb(255, 0, 0);">{{Tonggia}}</span></h1>
+                        <h1>Đặt cọc: <span style="padding-right: 240px;"></span> <span style = "color: rgb(255, 0, 0);">{{GiaDC}}</span></h1>
+                        <h1>Số tiền còn lại: <span style="padding-right: 203px;"></span> <span style = "color: rgb(255, 0, 0);">{{GiaCL}}</span></h1>
+                        <h1>Giá đã bao gồm: Thuế <span style ="color: rgb(255, 0, 0);">10%</span>, Phí dịch vụ <span style ="color: rgb(255, 0, 0);">5%</span></h1>
+                        <hr>
+                        <h1 style = "font-family: inherit;color: #252525;font-size:20px;">Tổng giá thanh toán đặt cọc<span style = "margin-left:13px; color: rgb(255, 0, 0);">{{GiaDC}}</span></h1>                 
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+            
+    </div>
+</div>
+
+<script>
+    var paymentMethodSelect = document.getElementById("payment-method");
+    var paymentMethodImage = document.querySelector(".select-image");
+    paymentMethodSelect.addEventListener("change", function() {
+        var selectedOption = paymentMethodSelect.options[paymentMethodSelect.selectedIndex];
+        paymentMethodImage.style.backgroundImage = "url('" + selectedOption.getAttribute("data-image") + "')";
+    
+    });
+</script>
+
+<script>
+    // Get references to the select element and div elements
+    const select = document.getElementById('payment-method');
+    const div1 = document.getElementById('selected-box1');
+    const div2 = document.getElementById('selected-box2');
+    const div3 = document.getElementById('selected-box3');
+  
+    // Add an event listener to the select element
+    select.addEventListener('change', function() {
+      // Check which option is selected and update the display of the corresponding div element
+      if (select.value === 'pay') {
+        div1.style.display = 'block';
+        div2.style.display = 'none';
+        div3.style.display = 'none';
+      } else if (select.value === 'momo') {
+        div1.style.display = 'none';
+        div2.style.display = 'block';
+        div3.style.display = 'none';
+      } else if (select.value === 'zalo') {
+        div1.style.display = 'none';
+        div2.style.display = 'none';
+        div3.style.display = 'block';
+      }
+    });
+  </script>
+
+
+{% endblock %}

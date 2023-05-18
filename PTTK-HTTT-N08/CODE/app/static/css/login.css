@@ -1,0 +1,46 @@
+/* login */
+.gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #858585;
+    border: #858585 1px solid;
+    }
+    
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }
+.gradient-custom-2:hover{
+    background: #646464;
+    border: #858585 1px solid;
+}
+.background-login{
+    background-color: #000000;
+    background-image: url(../images/background-login.jpg);
+    background-size: cover;
+    background-color: rgba(255, 14, 14, 0.779);
+
+}
+.btn-outline-danger{
+    color:#000000;
+    border: #858585 1px solid;
+}
+.btn-outline-danger:hover{
+    color: #000000;
+    background-color: #b1b1b1c8 !important;
+    border: #858585 1px solid;
+}
+.form-control:focus {
+    border-color: rgba(47, 47, 194, 0.181); /* đổi màu border */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.103); /* đổi màu shadow */
+  }
+.text-sigup{
+    font-size:14px;
+ 
+}

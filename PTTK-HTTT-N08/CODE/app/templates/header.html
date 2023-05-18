@@ -1,0 +1,125 @@
+<div class="site-navbar-wrap js-site-navbar bg-white">
+  <div class="container">
+    <div class="site-navbar bg-light">
+      <div class="py-1">
+        <div class="row align-items-center">
+          <div class="col-2">
+            <h2 class="mb-0 site-logo"><a href="{{ url_for('home')}}">StayNTouch<span><i class="fa-solid fa-hotel"></i></span></a></h2>
+          </div>
+          <div class="col-8">
+            <nav class="site-navigation text-right" role="navigation">
+              <div class="container">
+                <div class="d-inline-block d-lg-none  ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a></div>
+                <ul class="site-menu js-clone-nav d-none d-lg-block" id = "side">
+                  <li >
+                    <a  href="{{ url_for('home')}}">Trang chủ</a>
+                  </li>
+                  <li class="has-children">
+                    <a href="{{ url_for('rooms')}}">Phòng</a>
+                    <ul class="dropdown arrow-top">
+                      <li class="has-children">
+                        <a href="{{ url_for('rooms')}}">Danh sách phòng</a>
+                      </li>
+                      <li class="has-children">
+                        <a href="{{ url_for('rooms')}}">Dịch vụ</a>
+                        <ul class="dropdown">
+                          <li><a href="{{ url_for('rooms')}}">Thông tin dịch vụ</a></li>
+                        </ul>
+                        <ul class="dropdown">
+                          <li><a href="{{ url_for('rooms')}}">Thông tin </a></li>
+                        </ul>
+                      </li>
+                      <li class="has-children">
+                        <a href="{{ url_for('rooms')}}">Loại phòng</a>
+                      </li>
+                    </ul>
+                  </li>
+                    <li><a href="{{ url_for('events')}}">Sự kiện</a></li>
+                
+              
+                  <li><a href="{{ url_for('contact')}}">Liên hệ</a></li>
+                </ul>
+                
+              </div>
+            </nav>
+          </div>         
+            </nav>
+          </div>
+        </div>
+      </div>  
+    </div>
+    {% if session.logged_in %}
+  <div class="btn-login"><i class="fa-solid fa-magnifying-glass"></i></div>
+  <a class="btn-icon" href="{{ url_for('profile')}}"><i class="fa-regular fa-user"></i></a>
+  <div class = "block_profile">
+    <a href = "" class="profile-link">Trả phòng</a>
+    <a href = "" class="profile-link">Lịch sử đặt phòng</a>
+    <a href = "" class="profile-link">Quản lý hành lý</a>
+    <a href = "" class="profile-link">Đăng ký vận chuyển</a>
+    <a href = "" class="profile-link">Tra cứu tour du lịch</a>
+    <a href = "" class="profile-link">Tra cứu dịch vụ</a>
+    <a href = "" class="profile-link">Đăng ký vận chuyển</a>
+    <a href = "{{ url_for('logout')}}" class="profile-link">Đăng xuất</a>
+  </div>
+  <form>
+    <input type="text" class="expandable" placeholder="Tìm kiếm...">
+  </form>
+    {% else %}
+      <div ><a class="btn-login" href="{{ url_for('login')}}">ĐĂNG NHẬP</a></div>
+      <span class="span_or"><a>/</a></span>
+      <div ><a class="btn-signup" href="{{ url_for('signup')}}">ĐĂNG KÝ</a></div>
+    {% endif %}
+  </div>
+</div>
+<script>
+  var expandableInput = document.querySelector('.expandable');
+  var searchBtn = document.querySelector('.btn-login');
+
+  searchBtn.addEventListener('click', function() {
+    if (expandableInput.classList.contains('active')) {
+      expandableInput.classList.remove('active');
+    } else {
+      expandableInput.classList.add('active');
+    }
+  });
+
+var tabs = document.querySelectorAll('.site-menu li');
+
+// Get the current URL
+var currentUrl = window.location.href;
+
+    // Get all the navigation links
+    var navLinks = document.querySelectorAll('.site-menu a');
+
+    // Loop through each navigation link
+    for (var i = 0; i < navLinks.length; i++) {
+        var linkUrl = navLinks[i].href;
+        // If the link URL matches the current URL, add the active class
+        if (currentUrl === linkUrl) {
+            navLinks[i].parentNode.classList.add('active');
+        }
+    }
+</script>
+<script>
+// Lấy thẻ a và div cần sử dụng
+const btnIcon = document.querySelector('.btn-icon');
+const blockProfile = document.querySelector('.block_profile');
+
+// Thêm sự kiện hover vào nút btn-icon
+btnIcon.addEventListener('mouseover', () => {
+  // Hiển thị block_profile
+  blockProfile.style.display = 'block';
+});
+
+// Thêm sự kiện hover-out vào block_profile
+blockProfile.addEventListener('mouseleave', () => {
+  // Ẩn block_profile
+  blockProfile.style.display = 'none';
+});
+
+// Thêm sự kiện hover vào block_profile
+blockProfile.addEventListener('mouseover', () => {
+  // Hiển thị block_profile
+  blockProfile.style.display = 'block';
+});
+</script>

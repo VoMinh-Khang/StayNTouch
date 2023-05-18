@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+    <title>Login #6</title>
+  </head>
+  <body>
+    <section class="h-100 gradient-form" style="background-color: #eee;">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-xl-10">
+            <div class="card rounded-3 text-black">
+              <div class="row g-0">
+                <div class="col-lg-6">
+                  <div class="card-body p-md-5 mx-md-4">
+    
+                    <div class="text-center">
+                      <h4 class="mt-1 mb-5 pb-1">ĐĂNG NHẬP</h4>
+                    </div>
+                    {% if message %}
+                    <div class="alert alert-warning" role="alert">
+                      {{message}}
+                    </div>
+                    {% endif %}
+    
+                    <form method="POST">
+                      <!-- <p>Please login to your account</p> -->
+    
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example11">Tên Đăng Nhập</label>
+                        <input type="text" id="form2Example11" name="username" class="form-control"
+                          placeholder="" required oninvalid="this.setCustomValidity('Vui lòng nhập tên đăng nhập')"/>
+                      </div>
+    
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example22">Mật khẩu</label>
+                        <input type="password" id="form2Example22" name="password" class="form-control" required oninvalid="this.setCustomValidity('Vui lòng nhập mật khẩu')"/>
+                      
+                      </div>
+    
+                      <div class="text-center pt-1 mb-5 pb-1">
+                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
+                          in</button>
+                        <a class="text-muted" href="#!">Forgot password?</a>
+                      </div>
+    
+                      <div class="d-flex align-items-center justify-content-center pb-4">
+                        <p class="mb-0 me-2">Bạn chưa có tài khoản?</p>
+                        <a href = "{{ url_for('signup')}}" class = "text-muted" style = "margin-left:10px;"> Đăng Ký</a>
+                      </div>
+
+                      <div class="text-center">
+                        <a style="color:black; font-size:13px;" href="{{ url_for('home')}}"><u>Trở về trang chủ</u></a>
+                    </div>
+    
+                    </form>
+    
+                  </div>
+                </div>
+                <div class="col-lg-6 d-flex align-items-center background-login">
+                  <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                    <h4 class="mb-4 text-login">Chào mừng bạn đến với StayNTouch</h4>
+                    <p class="small mb-0 text-login">Nơi bạn có thể tìm thấy những trải nghiệm nghỉ dưỡng tuyệt vời và chất lượng phục vụ hàng đầu.
+                      Với hơn 10 năm kinh nghiệm trong lĩnh vực khách sạn, StayNTouch tự hào mang đến cho du khách những phòng nghỉ tiện nghi và đầy đủ tiêu chuẩn chất lượng.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery-ui.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.countdown.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/bootstrap-datepicker.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/mediaelement-and-player.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
+</html>

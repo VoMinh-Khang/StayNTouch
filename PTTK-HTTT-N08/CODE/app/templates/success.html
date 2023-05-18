@@ -1,0 +1,102 @@
+
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="backgroud-blue">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-7 text-center" data-aos="fade">
+        </div>
+      </div>
+    </div>
+  </div> 
+
+<div id="booking" class="section" style="height:700px;">
+    <div class="section-center section-pay">
+        <div class="container">
+            <div class="row">
+                <div class ="col-sm-8">
+                    <div class="row main-booking main-pay main-success1" style="height:140px;">
+                        <div class = "col-md-12 text-success1">
+                            <p>Cảm ơn Quý khách đã đặt phòng với chúng tôi!<img src="../static/images/check.png" style = "width:30px;margin-left:6px;" alt=""></p>
+                        </div>
+                        <div class = "col-md-12 text-success2">
+                            <p style = "color: #101010db; font-size: 13px;margin-top: 10px;">Hãy tận hưởng những dịch vụ của khách sạn chúng tôi, chúc quý khách có 1 trải nghiệm kỳ nghỉ tuyệt vời</p>
+                        </div>
+                    </div>
+                    <div class="row main-booking main-pay main-success2">
+                        <div>
+                            <p>Đặt phòng của bạn đã hoàn tất!</p>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span style = " margin-left: 5px;">Bạn đã cọc trước và có thể thanh toán sau khi trả phòng trên trang web hoặc tại quầy.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span style = " margin-left: 5px;">Mã đặt phòng: <span style = "color:#ff003c">{{mapdp}}</span></span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span style = " margin-left: 5px;">kiểm tra thông tin đặt phòng tại email <span style = "color: black;"></span></span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                <span style = " margin-left: 5px;">Vui lòng xuất trình xác nhận khi đặt phòng</span>
+                            </li>
+                        </div>
+                        
+            
+                    </div>
+                    
+                    <a href="{{ url_for('home')}}" class="btn btn-back-bk">Quay lại Trang chủ</a>
+                    
+                </div>
+                <div class = "col-sm-4" style="margin-top:-20px;">
+                    <div class="row info-pay">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img style = "max-width: 100%"src="{{room_item[6]}}" alt="">
+                            </div>
+
+                            <div class="col-sm-6 text-des">
+                                <div class="block-wifi"><p>Wi-Fi Miễn phí</p></div>
+                                <p style = "color: rgb(27, 27, 27); font-size:18px;margin-bottom:-6px;">Phòng số {{room_item[0]}}</p>
+                                <span style="font-size:120%;color:#ff567d;">&starf;&starf;&starf;&starf;&star;</span>
+                                <p style="margin-bottom:-1px;">Tiện nghi:</p>
+                                {% for i in tiennghi %}
+                                    <li style="margin-left:20px;">{{i}}</li>
+                                {% endfor %}
+                        
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row info-pay" style = "margin-top:20px;">
+                        <h1>Giá tiền (1 phòng x 1 đêm):<span style="padding-right: 130px;"></span> <span style = "color: rgb(255, 0, 0);">{{Gia}}</span></h1>
+                        <h1>Tổng giá phòng: <span style="padding-right: 193px;"></span> <span style = "color: rgb(255, 0, 0);">{{Tonggia}}</span></h1>
+                        <h1>Đặt cọc: <span style="padding-right: 240px;"></span> <span style = "color: rgb(255, 0, 0);">{{GiaDC}}</span></h1>
+                        <h1>Số tiền còn lại: <span style="padding-right: 203px;"></span> <span style = "color: rgb(255, 0, 0);">{{GiaCL}}</span></h1>
+                        <h1>Giá đã bao gồm: Thuế <span style ="color: rgb(255, 0, 0);">10%</span>, Phí dịch vụ <span style ="color: rgb(255, 0, 0);">5%</span></h1>
+                        <hr>
+                        <h1 style = "font-family: inherit;color: #252525;font-size:20px;">Tổng giá thanh toán đặt cọc<span style = "margin-left:13px; color: rgb(255, 0, 0);">{{GiaDC}}</span></h1>                 
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+            
+    </div>
+</div>
+
+<script>
+    var paymentMethodSelect = document.getElementById("payment-method");
+    var paymentMethodImage = document.querySelector(".select-image");
+    paymentMethodSelect.addEventListener("change", function() {
+        var selectedOption = paymentMethodSelect.options[paymentMethodSelect.selectedIndex];
+        paymentMethodImage.style.backgroundImage = "url('" + selectedOption.getAttribute("data-image") + "')";
+    
+    });
+</script>
+
+{% endblock %}

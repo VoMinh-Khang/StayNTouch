@@ -1,0 +1,98 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class = "defail">
+    <div class="backgroud-blue">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+        <div class="col-md-7 text-center" data-aos="fade">
+        </div>
+        </div>
+    </div>
+    </div> 
+
+    <div class = "main-defail">
+        <div style = "padding:20px 40px;">
+            <div class = "row">
+                <span style = "color: rgba(3,18,26,1.00);font-weight:550;font-size:25px;"></span>   
+            </div>
+            <div class = "row">
+                <span style = "color: #000000; font-size:30px;">THÔNG TIN LOẠI {{name_type}}</span>
+            </div>
+            <hr style = "margin-left:-14px;">
+            <div class = "row">
+                <div class = "col-8">
+                        <img src="{{type_item[3]}}" alt="" style = "width:620px;height:410px;object-fit: cover;border-radius:6px;">
+                </div>
+                <div class = "col-4" style = "padding-left: 110px;">
+                    <div class = "row">
+                        <img src="{{type_item[3]}}" alt="" style = "width:170px;height:125px;object-fit: cover;border-radius:6px;margin-bottom:17px;">
+                    </div>
+                    <div class = "row">
+                        <img src="{{type_item[3]}}" alt="" style = "width:170px;height:125px;object-fit: cover;border-radius:6px;margin-bottom:17px;">
+                    </div>
+                    <div class = "row">
+                        <img src="{{type_item[3]}}" alt="" style = "width:170px;height:125px;object-fit: cover;border-radius:6px;">
+                    </div>
+                </div>
+
+            </div>
+            <div class = "row">
+                <div class = "col-8">
+                </div>
+                <div class = "col-4">
+                    <div>
+                        <div class = "row" style = "margin-top:20px;margin-left:80px;">
+                            <span style = "color:rgb(255, 94, 31); font-weight:500;font-size:22px;"></span>
+                        </div>
+                        <div class = "row" style = "margin-left:75px;margin-top:5px;">
+
+                        </div>
+                    </div>
+                </div>
+            <div class = "row" style = "margin-left:1px;">
+                <span style = "color: #000000;margin-top:20px;">Dịch vụ loại phòng</span>
+            </div>
+            <div class = "row" style = "margin-top:70px;margin-left:20px;">
+                <div class = "col-2">
+                    <img src="../static/images/air-conditioner.png" alt="" style = "width:60px; margin-right:80px;">
+                   <span style = " color: #000000;margin-top:5px;">Máy lạnh</span>
+                </div>
+                <div class = "col-2">
+                    <img src="../static/images/fork.png" alt="" style = "width:60px; margin-right:80px;">
+                    <span style = " color: #000000;margin-top:5px;">Nhà hàng</span>
+                </div>
+                <div class = "col-2">
+                    <img src="../static/images/elevator.png" alt="" style = "width:60px; margin-right:80px;">
+                    <span style = " color: #000000;margin-top:5px;">Thang máy</span>
+                </div>
+                <div class = "col-2">
+                    <img src="../static/images/television.png" alt="" style = "width:60px; margin-right:80px;">
+                    <span style = "margin-left:12px; color: #000000;margin-top:5px;">Ti-Vi</span>
+                </div>
+                <div class = "col-2">
+                    <img src="../static/images/24h.png" alt="" style = "width:60px; margin-right:80px;">
+                    <span style = "margin-left:12px; color: #000000;margin-top:5px;">24h</span>
+                </div>
+                <div class = "col-2">
+                    <img src="../static/images/wifi.png" alt="" style = "width:60px; margin-right:80px;">
+                    <span style = "margin-left:12px; color: #000000;margin-top:5px;">WiFi</span>
+                </div>
+            </div>
+          
+        </div>
+        <div style = "margin-left:340px;margin-top:40px;">
+            <span style = "color: rgb(1 148 243);font-weight:600;">Xem tất cả</span>
+        </div>
+        <div class = "row" style = "color: #000000;margin-top: 30px;">
+            Mô tả: {{type_item[2]}}</br>
+            
+        </div>
+        
+        
+
+    </div>
+
+</div>
+
+{% endblock %}
